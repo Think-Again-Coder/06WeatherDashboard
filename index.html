@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Weather Dashboard! </title>
+</head>
+<body>
+    <!-- This top section is the Nav bar mainly used as a banner -->
+    <section class="hero is-info is-mobile">
+        <div class="hero-body">
+          <p class="title has-text-centered">
+            Weather Dashboard
+          </p>
+          <p class="subtitle has-text-centered">
+            Your Weather Made Easy!
+          </p>
+        </div>
+      </section>
+
+      <!-- The section below is the input box for searching of the city -->
+    <h2 class="is-mobile">Search for a City: </h2>
+    <div class="citySearch is-mobile">
+        <input class="input is-rounded has-text-centered" type="text" placeholder="Rounded input">
+        <button class="button is-fullwidth is-hovered">Search</button>
+    </div>
+
+<!-- the section below is the previous city searched buttons -->
+    <div class="columns is-mobile is-one-quarter">
+        <div class="column" id="slot1"><button class="button is-rounded">City Name</button></div>
+        <div class="column" id="slot2"><button class="button is-rounded">2</button></div>
+        <div class="column" id="slot3"><button class="button is-rounded">3</button></div>
+        <div class="column" id="slot4"><button class="button is-rounded">4</button></div>
+        <div class="column" id="slot5"><button class="button is-rounded">5</button></div>
+        <div class="column" id="slot6"><button class="button is-rounded">6</button></div>
+        <div class="column" id="slot7"><button class="button is-rounded">7</button></div>
+        <div class="column" id="slot8"><button class="button is-rounded">8</button></div>
+    </div>
+    <!-- This section is intended to be the main square for the city requested and loaded to right side -->
+    <div class="box is-three-quarters mainView">
+        <h1>City Name</h1>
+        <p>I'm in a box. Tucson, Arizona</p> 
+        <h2>5- Day Forecast: </h2><br> <!-- The 5day forecast should be media boxes or smaller day by day weather-->
+
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content has-background-light">
+                  <p class="title is-4">Sunny Day</p>
+                  <p class="subtitle is-6">chance of rain</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+
+      <!--The section below are my script files including a config file that holds a secure api key, hidden from repo-->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

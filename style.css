@@ -1,0 +1,25 @@
+* {
+
+    /* border: solid 2px blue; */
+}
+
+.theCity:hover {
+    font-weight: bold;
+    
+}
+
+.box {
+    align-items: flex-end;
+}
+
+.mainView {
+
+}
+
+.hero {
+    background: linear-gradient(90deg, silver, Blue);
+}
+/* .title .subtitle {
+    display: flex;
+    align-items: center;
+} */
