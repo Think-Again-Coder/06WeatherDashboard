@@ -1,11 +1,29 @@
 * {
-
+    margin-top: 0;
+    margin-left: 0;
     /* border: solid 2px blue; */
 }
 
-.theCity:hover {
+h2 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+button {
+    margin: 3px;
+}
+
+#findCity {
+    text-align: center;
+}
+
+.citySearch:hover {
     font-weight: bold;
     
+}
+
+.columns {
+    margin-top: 6px;
 }
 
 .box {
