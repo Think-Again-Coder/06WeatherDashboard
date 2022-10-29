@@ -6,8 +6,23 @@ var textArea = slot1.querySelector('button');
 //the input and button for searching are below.
 // var citySearch = document.querySelector('');
 var findCity = document.querySelector('#citySearch');
+var temperature = document.querySelector('.temp')
+var humidity = document.querySelector('.humidity')
+var wind = document.querySelector('.wind')
+var uvIndex = document.querySelector('.uvI')
+var forecastContainer = document.querySelector('.forecastContainer')
 
- 
+//This sets the time at header when the user clicks to search for a city.
+document.getElementById("findCity").addEventListener("click", function() {
+    displayDate()
+    city(findCity.value)
+});
+
+function displayDate() {
+    document.getElementById("tiempo").innerHTML = new Date();
+};
+
+
 //First function is to find the city based on an API call for city.
 function city (citySearch){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${api.key}`)
@@ -15,43 +30,45 @@ function city (citySearch){
         return response.json()
 
     } ) .then (function(data){
-        console.log(data.coord.lat, data.coord.lon);
+        // console.log(data.coord.lat, data.coord.lon);
         getWeather(data.coord.lat, data.coord.lon)
     })
 };
 
-city('Houston');
+// city('');
 
 //This function is built to access the weather details for the specific 
-function getWeather (lat, lon) {
+function getWeather (lat, lon,) {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${api.key}&exclude=hourly,minutely,alerts&units=imperial`)
     .then(function(response){
         return response.json()
 
     }) .then(function(data){
         console.log(data);
+        temperature.innerHTML = data.current.temp + 'F'
+        humidity.textContent = data.current.humidity + '%'
+        wind.innerText = data.current.wind_speed
+        uvIndex.innerText = data.current.uvi
+        if (data.current.uvi <= 5 ) {
+            uvIndex.style.backgroundColor = 'green'
+        } else {
+            uvIndex.style.backgroundColor = 'red'
+        }
+        for (var i = 1; i < 6; i++ ) {
+            var card = document.createElement('div')
+            var forecastTemp = document.createElement('p')
+            forecastTemp.innerText = data.daily[i].temp.day
+            console.log(forecastTemp)
+        }
+        
     })
 };
 
-findCity.addEventListener("click", citySearch);
+function getForecast () {
 
-//The function below allows the names being searched to populate on the bigView container
-var searchFormEl = document.querySelector('#search-form');
 
-function getSearch(event) {
-  event.preventDefault();
-
-  var searchInputVal = document.querySelector('#citySearch').value;
-  var formatInputVal = document.querySelector('#').value;
-
-  if (!searchInputVal) {
-    console.error('Please Enter a City Name');
-    return;
-  }
-
-  var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
-
-  location.assign(queryString);
 }
-
-// searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+// append forecast temp to card
+        // at the end of for loop append card to forecast container(very end)
+        // then append card to forecast container
+        // use appendChild to connect them

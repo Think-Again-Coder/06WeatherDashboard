@@ -1,7 +1,7 @@
 * {
     margin-top: 0;
     margin-left: 0;
-    /* border: solid 2px blue; */
+    /* border: solid 1px goldenrod; */
 }
 
 h2 {
@@ -14,7 +14,7 @@ button {
 }
 
 #findCity {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .citySearch:hover {
@@ -41,3 +41,7 @@ button {
     display: flex;
     align-items: center;
 } */
+
+#weatherHead {
+    font-size: 36px;
+}
