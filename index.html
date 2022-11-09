@@ -27,32 +27,62 @@
   <div class="container card">    
       <h2 class=" mx-4 ">Search for a City: </h2>
       <div class=" is-centered">
-        <input class="input is-rounded is-small my-4 has-text-centered" id="citySearch" type="text" placeholder="San Francisco">
+        <input class="input is-rounded is-small my-4 has-text-centered" id="citySearch" type="text" placeholder="Type Your City Here">
         <button class="button is-medium is-hovered is-info my-4 mx-6" id="findCity">Search</button>
    </div>
 
 <!-- the section below is the previous city searched buttons -->
-   <section class="column ">
-      <div class="card column is-multiline is-one-quarter mx-5 my-4">
-          <div class="column has-background-info-light" id="slot1"><button class="button is-rounded">New York</button></div>
-      </div> <!-- This section is intended to be the main square for the city requested and loaded to right side -->  
-          <div class="card column is-one-quarter my-4 mx-6" class="mainView">
-            <h1 class=" ">City Name</h1>
-            <!-- <p id="tiempo">Tucson, Arizona</p>  -->
+   <section class="columns">
+      <div class="column is-one-fifth mx-4 my-4" id="slot1">San Francisco</div>
+      <!-- This section is intended to be the main square for the city requested and loaded to right side -->  
+          <div class="section is-medium card column is-three-quarter my-4 mx-6 is-align-content: flex-start has-background-info" class="mainView">
+            <h1 class="icon mx-4 my-4" id="skyColor">Weather Icon</h1>
             <p class="temp">Temperature</p>
             <p class="humidity">Humidity</p>
             <p class="wind">wind</p>
-            <p class="uvI">Uv Index</p>
+            <p class="uvI">UV Index</p>
           </div>  
     </section>  
   
     <!--This section is for the cards that will display the 5 day forecast-->
-      <div class="column card">
+      <div class="column">
         <h2><strong>5- Day Forecast: </strong></h2><br> <!-- The 5day forecast should be media boxes or smaller day by day weather-->
-        <div class="forecastContainer">empty</div>
-          <div class="forecastDay"></div>
-
-        
+        <div class="forecastContainer"class="forecastDay"  class="columns"></div>
+        <div class="section is-small card column is-three-quarter my-4 mx-6 is-align-content: flex-start" class="mainView">
+          <h1 class="yourCity icon"></h1>
+          <!-- <p id="tiempo">Tucson, Arizona</p>  -->
+          <p class="temp">Temperature</p>
+          <p class="humidity">Humidity</p>
+          <p class="wind">Wind</p>
+          <p class="uvI">UV Index</p>
+        </div>
+        <div class="section is-small card column is-three-quarter my-4 mx-6 is-align-content: flex-start" class="mainView">
+          <h1 class="yourCity icon"></h1>
+          <p class="temp">Temperature</p>
+          <p class="humidity">Humidity</p>
+          <p class="wind">wind</p>
+          <p class="uvI">UV Index</p>
+        </div>
+        <div class="section is-small card column is-three-quarter my-4 mx-6 is-align-content: flex-start" class="mainView">
+          <h1 class="yourCity icon"></h1>
+          <p class="temp">Temperature</p>
+          <p class="humidity">Humidity</p>
+          <p class="wind">wind</p>
+          <p class="uvI">UV Index</p>
+        </div>
+        <div class="section is-small card column is-three-quarter my-4 mx-6 is-align-content: flex-start" class="mainView">
+          <h1 class="yourCity icon"></h1>
+          <p class="temp">Temperature</p>
+          <p class="humidity">Humidity</p>
+          <p class="wind">wind</p>
+          <p class="uvI">UV Index</p>
+        </div><div class="section is-small card column is-three-quarter my-4 mx-6 is-align-content: flex-start" class="mainView">
+          <h1 class="yourCity icon"></h1>
+          <p class="temp">Temperature</p>
+          <p class="humidity">Humidity</p>
+          <p class="wind">wind</p>
+          <p class="uvI">UV Index</p>
+        </div>
       </div>
 
       <!--The section below are my script files including a config file that holds a secure api key, hidden from repo-->

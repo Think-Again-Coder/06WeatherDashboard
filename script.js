@@ -5,7 +5,8 @@ var textArea = slot1.querySelector('button');
 
 //the input and button for searching are below.
 // var citySearch = document.querySelector('');
-var findCity = document.querySelector('#citySearch');
+var findCity = document.querySelector('#citySearch')
+var weatherIcon = document.querySelectorAll('.icon')
 var temperature = document.querySelector('.temp')
 var humidity = document.querySelector('.humidity')
 var wind = document.querySelector('.wind')
@@ -45,10 +46,11 @@ function getWeather (lat, lon,) {
 
     }) .then(function(data){
         console.log(data);
-        temperature.innerHTML = data.current.temp + 'F'
-        humidity.textContent = data.current.humidity + '%'
-        wind.innerText = data.current.wind_speed
-        uvIndex.innerText = data.current.uvi
+        weatherIcon.innerText = data.current.icon
+        temperature.innerHTML = 'Temperature: ' + data.current.temp + 'F'
+        humidity.textContent = 'Humidity: ' + data.current.humidity + '%'
+        wind.innerText = 'Wind: ' + data.current.wind_speed + 'mph'
+        uvIndex.innerText = 'UV Index: ' + data.current.uvi
         if (data.current.uvi <= 5 ) {
             uvIndex.style.backgroundColor = 'green'
         } else {
