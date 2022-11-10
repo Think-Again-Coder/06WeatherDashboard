@@ -4,9 +4,14 @@
     /* border: solid 1px goldenrod; */
 }
 
+.title {
+    font-family: 'Merriweather', serif;
+}
+
 h2 {
     font-weight: bold;
     font-size: larger;
+    font-family: 'Merriweather', serif;
 }
 
 button {
