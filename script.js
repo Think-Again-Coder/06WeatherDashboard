@@ -46,7 +46,7 @@ function getWeather (lat, lon,) {
 
     }) .then(function(data){
         console.log(data);
-        weatherIcon.innerText = data.current.icon
+        // weatherIcon.innerText = data.weather[0].icon 
         temperature.innerHTML = 'Temperature: ' + data.current.temp + 'F'
         humidity.textContent = 'Humidity: ' + data.current.humidity + '%'
         wind.innerText = 'Wind: ' + data.current.wind_speed + 'mph'
@@ -70,6 +70,10 @@ function getForecast () {
 
 
 }
+
+// document.getElementById('icon').src = "http://openweathermap.org/img/w/"+obj.weather[0].icon+".png";
+//  }
+
 // append forecast temp to card
         // at the end of for loop append card to forecast container(very end)
         // then append card to forecast container
